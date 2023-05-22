@@ -20,7 +20,7 @@ module AskChatgpt
     attr_reader :scope, :client, :spinner, :cursor
 
     def self.call
-      client = OpenAI::Client.new(access_token: AskChatGPT.access_token)
+      client = OpenAI::Client.new(api_key: AskChatGPT.access_token)
       AskChatgpt::Executor.new(client)
     end
 
